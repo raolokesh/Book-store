@@ -18,7 +18,6 @@ def index(request):
 
 def book(request , slug):
     book = get_object_or_404(Book , slug = slug)
-
     return render(request , "book_outlet/book_details.html",{
         
         "title": book.title,
